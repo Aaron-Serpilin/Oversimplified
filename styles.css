@@ -1,0 +1,581 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Defining variables for the themes */
+  :root[data-theme="light"] {
+    --bg-color: #f7fafc;
+    --mobile-bg-color: #f4fafa;
+    --text-color: #1a202c;
+    --text-color-space: #f7fafc;
+    --link-text: #1a202c;
+    --button-bg: #2b6cb0;
+    --button-text: #f7fafc;
+  }
+  
+  :root[data-theme="dark"] {
+    --bg-color: #2a4365;
+    --mobile-bg-color: #2d4669;
+    --text-color: #f7fafc;
+    --text-color-space: #f7fafc;
+    --link-text: #f7fafc;
+    --button-bg: #2b6cb0;
+    --button-text: #f7fafc;
+  }
+  
+  /* Transition for theme */
+  .theme-transition {
+    transition: background 0.25s ease-in-out;
+  }
+  
+  /* Standard for everything*/
+  
+  body {
+    background-color: var(--bg-color);
+    font-size: 18px;
+    line-height: 1.8em;
+    font-weight: 300;
+    font-family: "Montserrat", sans-serif;
+    color: var(--text-color);
+  }
+  
+  /* Everything below this comment is for the Home Tab */
+  
+  .BackgroundImages img {
+    position: absolute;
+    z-index: -1;
+    height: 100%;
+    width: 100%;
+    opacity: 0%;
+    transition-delay: 5s;
+    transition: opacity 5s;
+  }
+  
+  .Header,
+  .Subsection {
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: transparent;
+    position: fixed;
+  }
+
+  .HomeTabHeader { /*This specific header was created to erase a strange error, if I swapped it for the normal header, I'd get that error back*/
+    width: 100%;
+    height: auto;
+    display: block;
+    background-color: transparent;
+  }
+  
+  .Header a,
+  .Subsection a,
+  .HomeTabHeader a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+  
+  .Header a:hover,
+  .HomeTabHeader a:hover {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  .Header-Container {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .Menu {
+    display: flex;
+    justify-content: center;
+    margin-right: 24px;
+  }
+  
+  .Menu li {
+    list-style: none;
+    margin-left: 50px;
+    margin-top: 10px;
+    font-size: 25px;
+  }
+  
+  .themeToggle {
+    font-size: 25px;
+    font-family: inherit;
+    background-color: inherit;
+    color: inherit;
+    border: none;
+    outline: none;
+  }
+  
+  .themeToggle:hover,
+  .themeToggle:active {
+    cursor: pointer;
+    text-decoration: underline;
+  }
+  
+  
+  /* Code for hamburger menu */
+
+  .hamburgerMenu {
+    display: none;
+    background-color: transparent;
+    color: inherit;
+    border: none;
+    outline: none;
+    height: 42px;
+    width: 42px;
+  }
+  
+  .hamburgerMenu:hover {
+    cursor: pointer;
+  }
+  
+  .Tab-Body {
+    margin-top: 175px;
+    text-align: center;
+  }
+  
+  .Tab-Body h1 {
+    font-size: 80px;
+    padding-bottom: 80px;
+  }
+  
+  .Tab-Body p {
+    font-size: 50px;
+    padding-bottom: 30px;
+  }
+  
+  #HomeTabButton {
+    background-color: transparent;
+    border: 1px solid var(--text-color);
+    border-radius: 3px;
+    margin: 60px 0px;
+    padding: 10px 40px;
+    cursor: pointer;
+  }
+  
+  #HomeTabButton:hover {
+    opacity: 0.8;
+  }
+  
+  #HomeTabButton:active {
+    opacity: 0.5;
+  }
+  
+  #HomeTabButton a {
+    text-decoration: none;
+    font-size: 22px;
+    font-weight: bold;
+    color: var(--text-color);
+  }
+  
+  /*These CSS rules are specifically for the menus of the subsections */
+  
+  .Subsection {
+    background-color: transparent;
+  }
+  
+  .SubsectionMenu a:hover,
+  .SubsectionMenu a:active {
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  
+  /*Everything below this comment is for the contents subsection*/
+  
+  .Contents a {
+    color: white;
+    text-decoration: none;
+  }
+  
+  .Contents a:hover {
+    text-decoration: underline;
+  }
+  
+  .Content {
+    text-align: center;
+    width: 100%;
+    height: 175px;
+    font-size: 25px;
+    border: 1px solid white;
+    padding-top: 65px;
+  }
+  
+  #Antimatter {
+    background-image: url("Sections/Covers/Antimatter.jpg");
+    background-size: cover;
+    background-position-y: center;
+  }
+  
+  #BlackHoles {
+    background-image: url("Sections/Covers/BlackHole.jpg");
+    background-size: cover;
+    background-position-y: 45%;
+  }
+  
+  #DarkEnergy {
+    background-image: url("Sections/Covers/DarkEnergy.jpg");
+  }
+  
+  #DarkMatter {
+    background-image: url("Sections/Covers/DarkMatter.jpg");
+  }
+  
+  #FindingExoplanets {
+    background-image: url("Sections/Covers/FindingExoplanets.jpg");
+    background-size: cover;
+    background-position-y: center;
+  }
+  
+  #GeneralRelativity {
+    background-image: url("Sections/Covers/GeneralRelativity.jpg");
+    background-size: cover;
+    background-position-y: 25%;
+  }
+  
+  #Gravity {
+    background-image: url("Sections/Covers/Gravity.jpg");
+    background-size: cover;
+    background-position-y: center;
+  }
+  
+  #History {
+    background-image: url("Sections/Covers/History.jpg");
+    background-size: cover;
+    background-position-y: center;
+  }
+  
+  #InformationParadox {
+    background-image: url("Sections/Covers/InformationParadox.jpg");
+    background-size: cover;
+    background-position-y: center;
+  }
+  
+  #LifeOfStars {
+    background-image: url("Sections/Covers/LifeOfStars.jpg");
+    background-size: cover;
+    background-position-y: 55%;
+  }
+  
+  #Light {
+    background-image: url("Sections/Covers/Light.jpg");
+    background-size: cover;
+    background-position-y: 20%;
+  }
+  
+  #NeutronStars {
+    background-image: url("Sections/Covers/NeutronStars.jpg");
+    background-size: cover;
+    background-position-y: 40%;
+  }
+  
+  #PlanetFormation {
+    background-image: url("Sections/Covers/PlanetFormation.jpg");
+    background-size: cover;
+    background-position-y: 52%;
+  }
+  
+  #QuantumMechanics {
+    background-image: url("Sections/Covers/QuantumMechanics.jpg");
+    background-size: cover;
+    background-position-y: 57%;
+  }
+  
+  #StringTheory {
+    background-image: url("Sections/Covers/StringTheory.jpg");
+    background-size: cover;
+    background-position-y: center;
+  }
+  
+  #PeriodicTable {
+    background-image: url("Sections/Covers/PeriodicTable.jpg");
+    background-size: cover;
+    background-position-y: center;
+  }
+  
+  #TypeOfStars {
+    background-image: url("Sections/Covers/TypesOfStars.jpg");
+    background-size: cover;
+    background-position-y: center;
+  }
+  
+  #WhiteHoles {
+    background-image: url("Sections/Covers/WhiteHole.jpg");
+    background-size: cover;
+    background-position-y: 30%;
+  }
+  
+  /*Everything beneath has to do with the Q&A tab*/
+  
+  .longQuestion {
+    display: none;
+    margin-left: 550px;
+  }
+  
+  #Q-A-BG {
+    background: url("Images/Q&A-BG.jpg");
+    background-size: cover;
+  }
+
+  #Q-A-BG a {
+    color: white;
+  }
+  
+  .Questions {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .Questions h1 {
+    text-align: center;
+    padding: 30px 0px 10px 0px;
+    color: white;
+  }
+  
+  .Questions input[type="text"],
+  .Questions input,
+  .Questions textarea {
+    font-size: inherit;
+    padding-left: 10px;
+  }
+  
+  .Questions input,
+  .Questions textarea {
+    width: 450px;
+    height: 40px;
+    border-radius: 3px;
+    border: 1px solid grey;
+  }
+  
+  .Questions textarea {
+    font-family: "Montserrat", sans-serif;
+    height: 100px;
+  }
+  
+  .InputSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .InputSection select,
+  .InputSection option {
+    width: 450px;
+    height: 40px;
+    padding: 5px;
+    font-size: 16px;
+    -webkit-appearance: none;
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  .InputSection label {
+    align-self: start;
+    margin-left: 550px;
+    color: white;
+  }
+  
+  .InputSection a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .InputSection a:hover,
+  .InputSection a:active {
+    text-decoration: underline;
+  }
+  
+  .Checkbox input {
+    margin-top: 10px;
+    height: 15px;
+    width: 15px;
+    border-radius: 3px;
+    margin-left: 10px;
+  }
+  
+  #SubmitButton {
+    align-self: flex-start;
+    margin-left: 560px;
+    background-color: #2b6cb0;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 3px;
+    padding: 10px 10px;
+    width: 100px;
+    cursor: pointer;
+  }
+  
+  #SubmitButton:hover {
+    opacity: 0.8;
+  }
+  
+  #SubmitButton:active {
+    opacity: 0.5;
+  }
+  
+  .InputSection input[type="text"]:valid,
+  .InputSection input[type="email"]:valid {
+    background-color: aliceblue;
+  }
+  
+  /*Everything beneath has to do with the Documents in the content section*/
+  .Documents {
+    display: flex;
+    justify-content: space-around;
+  }
+  .Documents a {
+    color: var(--text-color);
+  }
+  
+  .Document {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 640px;
+    text-align: justify;
+  }
+  
+  .Document h1 {
+    margin-top: 40px;
+    margin-bottom: 30px;
+    font-size: 40px;
+  }
+  
+  .Document h3 {
+    margin-top: 20px;
+    align-self: flex-start;
+  }
+  
+  .Document h1,
+  .Document p,
+  .Document h3,
+  .Document li {
+    color: var(--text-color);
+  }
+  
+  .Document a {
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .Document a:hover {
+    text-decoration: underline;
+  }
+  
+  .AuthorDate {
+    font-size: 14px;
+    align-self: flex-start;
+  }
+  
+  .DocImages {
+    display: flex;
+    margin: 20px 0px 0px 0px;
+    width: 300px;
+    align-self: flex-start;
+  }
+  
+  .SourcesList {
+    align-self: flex-start;
+  }
+  
+  /* Everything below is for the Blog Pages in the site */
+  .BlogContent {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    margin: 2rem auto;
+  }
+  
+  .BlogContent a,
+  .BlogContent a:visited {
+    color: var(--link-text);
+    font-size: 24px;
+  }
+  
+  .BlogContent h1 {
+    margin: 2rem 0;
+  }
+  
+  .BlogContent ul {
+    margin: 2rem 0;
+    list-style-type: none;
+  }
+  
+  .BlogContent li {
+    margin: 1rem 0;
+  }
+  
+  @media (max-width: 800px) {
+    .BlogContent {
+      width: 80%;
+    }
+  }
+
+  /* Will switch to mobile menu once the screen is small enough */
+
+  @media (max-width: 768px) {
+    .Header-Container {
+      flex-direction: column;
+      align-items: flex-end;
+      margin: 32px;
+    }
+  
+    .hamburgerMenu {
+      display: block;
+    }
+  
+    .Menu {
+      display: none;
+      background: var(--mobile-bg-color);
+      border-radius: 10px;
+      box-shadow: inset 0 2px 4px 0 rgba(0, 0, 0, 0.06);
+      flex-direction: column;
+      margin: 0;
+      width: 100%;
+    }
+  
+    .Menu li {
+      margin: 0;
+      text-align: right;
+    }
+  
+    .themeToggle {
+      width: 100%;
+      text-align: right;
+    }
+  
+    .Menu li a,
+    .themeToggle {
+      width: 100%;
+      display: block;
+      padding: 1rem;
+    }
+  
+    .Menu li a:hover,
+    .Menu li a:active {
+      cursor: pointer;
+      text-decoration: none;
+    }
+  
+    .themeToggle:hover,
+    .themeToggle:active {
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    .longQuestion {
+        display: none;
+        margin-left: 300px;
+    }
+
+    .InputSection label {
+        align-self: start;
+        margin-left: 100px;
+        color: white;
+      }
+  }

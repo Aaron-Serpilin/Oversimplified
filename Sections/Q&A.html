@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='UTF-8' />
+    <title>Oversimplified</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap" rel="stylesheet">
+    <style>
+        
+    </style>
+    
+    <link rel='stylesheet' href='../styles.css' />
+</head>
+
+<body id='Q-A-BG'>
+    <header class="Header Subsection"> <!-- This is the menu-->
+        <nav class="Header-Container">
+            <button class="hamburgerMenu">
+              <svg viewBox="0 0 20 20" fill="currentColor" class="menu w-6 h-6">
+                <path
+                  fill-rule="evenodd"
+                  d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </button>
+            <ul id="MobileMenu" class="Menu SubsectionMenu">
+              <li><a href="../Oversimplified.html">Home</a></li>
+              <li><a href="Q&A.html">Q&A</a></li>
+              <li><a href="Blog.html">Blog</a></li>
+              <!-- <li><button class="themeToggle">Theme</button></li> -->
+            </ul>
+          </nav>
+    </header>
+    <article class="Questions"><!--This has to do with the Information section-->
+        <h1> Submit your question</h1>
+        <form method='GET' action='mailto:wot.questionsanswers@gmail.com' enctype="text/plain">
+            <div class="InputSection">
+                <label for='first-name'> First name</label>
+                <input id='first-name' name='body' type='text' placeholder="First Name" required/> 
+            </div>
+            <div class="InputSection">
+                <label for='last-name'> Last name</label>
+                <input id='last-name' name='body' type='text' placeholder="Last Name" required/>
+            </div>
+            <div class="InputSection">
+                <label for='Education'>Level of education</label>
+                <select id='Education' name='Education'>
+                    <option></option>
+                    <option>High School</option>
+                    <option>Physics undergraduate</option>
+                    <option>Physics graduate</option>
+                    <option>Adult with little knowledge of physics</option>
+                    <option>Adult with some knowledge of physics</option>
+                    <option>Adult with college level knowledge of physics</option>
+                </select>
+            </div>
+            <div class="InputSection">
+                <label for='subject'> Subject</label>
+                <input id='subject' name='subject' placeholder='Subject' required/>
+            </div>
+            <div class="InputSection">
+                <label for='question'> Your question</label>
+                <textarea id='question' name='body' placeholder="Be precise and describe your question in less than 100 words" required></textarea>
+            </div>
+            <p class="longQuestion">
+                Please enter a question in less than 100 words
+            </p>
+            <div class="InputSection">
+                <label class='Checkbox' for='accepts'>
+                <input id='accepts' name='accepts' type='checkbox' value='Agrees to the terms' required/>
+                <span> I accept the <a href="#"> Terms and Conditions</a></span>
+                </label>
+            </div>
+            <div class="InputSection">
+                <input id='SubmitButton' type="submit" value="Submit">
+            </div>
+        </form>
+    </article>
+<script src="../wordLimit.js"></script>
+<script src="../hamburgerMenu.js"></script>
+<script src="../darkMode.js"></script>
+</body>
+
+</html>
